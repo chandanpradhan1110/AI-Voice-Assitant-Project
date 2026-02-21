@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-voice-assistant"
+version = "0.1.0"
+description = "Production-ready AI Voice Assistant"
+authors = [
+    { name = "Chandan Pradhan" }
+]
+requires-python = ">=3.10,<3.12"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ai_voice_assistant*"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
